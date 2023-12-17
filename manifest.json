@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Screenshot Extension",
+  "version": "1.0",
+  "description": "Take screenshots and save in Excel",
+  "permissions": ["activeTab", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "images/icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js", "nonce.js"]
+    }
+  ]
+}
